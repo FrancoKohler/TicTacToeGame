@@ -1,0 +1,364 @@
+:root {
+  --clr-primary-1: #f2f2f7;
+  --clr-primary-2: #160c25;
+  --clr-secondary-1: #fe7e40;
+  --clr-secondary-2: #007aff;
+  --clr-secondary-3: #03346e;
+  --font-primary: "Montserrat", sans-serif;
+  --font-size-primary: 50px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.section-main {
+  display: flex;
+  height: 600px;
+  width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 3px 4px rgba(168, 168, 168, 0.6);
+}
+
+.main-game {
+  padding: 2rem;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  gap: 2rem;
+  width: 600px;
+}
+.game-name {
+  display: flex;
+  margin: auto;
+  font-family: var(--font-primary);
+  color: var(--clr-primary-2);
+}
+.game-banner {
+  height: 10rem;
+}
+.game-p {
+  color: #454149;
+}
+
+.game-btn {
+  text-decoration: none;
+  cursor: pointer;
+  color: #daedff;
+  font-weight: 600;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  border-radius: 10rem;
+  border: none;
+  width: 80%;
+  background: rgb(48, 132, 250);
+  background: linear-gradient(
+    135deg,
+    rgba(48, 132, 250, 0.91) 20%,
+    rgba(72, 183, 248, 1) 83%
+  );
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s;
+  box-shadow: 0 3px 4px rgba(168, 168, 168, 0.6);
+}
+
+.game-btn:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(48, 132, 250);
+  background: linear-gradient(
+    135deg,
+    rgba(48, 132, 250, 0.91) 20%,
+    rgba(72, 183, 248, 1) 83%
+  );
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.game-btn:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: rgb(255, 204, 69);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 204, 69, 1) 20%,
+    rgba(250, 153, 13, 1) 83%
+  );
+  border-radius: 10rem;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.game-btn:hover {
+  color: #fff;
+}
+
+.game-btn:hover:before {
+  width: 100%;
+}
+/*-----------SECOND SCREEN--------------*/
+.second-screen {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  padding: 2rem;
+}
+.back-arrow {
+  color: var(--clr-secondary-3);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  justify-content: start;
+  align-items: start;
+}
+.pick-header {
+  text-transform: uppercase;
+  padding-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+.main-pick {
+  padding-top: 4rem;
+}
+.h-remember {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  color: #444049;
+  padding-bottom: 2rem;
+}
+.radio-inputs {
+  display: flex;
+  gap: 8rem;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+.radio {
+  cursor: pointer;
+}
+
+.linkBtn {
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
+.ion-arrow {
+  cursor: pointer;
+  box-shadow: 0 3px 4px rgba(168, 168, 168, 0.6);
+  border-radius: 15px;
+  padding: 2px;
+}
+
+/*-------------THIRD SCREEN------------*/
+.logo-third {
+  width: 4rem;
+}
+.turn-img {
+  display: flex;
+}
+#turnImg {
+  width: 2rem;
+}
+.referencia-img {
+  width: 2rem;
+}
+.top-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.third-screen {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.game-container {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.cell:hover {
+  background-color: #cceeff;
+}
+.score-divs {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1rem;
+  gap: 60px;
+}
+.span-turn {
+  font-size: 0.8rem;
+}
+.div-x,
+.div-o {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin: auto;
+  width: 120px;
+}
+.div-o {
+  background: rgb(255, 204, 69);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 204, 69, 1) 20%,
+    rgba(250, 153, 13, 1) 83%
+  );
+}
+.div-x {
+  background: rgb(48, 132, 250);
+  background: linear-gradient(
+    135deg,
+    rgba(48, 132, 250, 0.91) 20%,
+    rgba(72, 183, 248, 1) 83%
+  );
+}
+/*-------X-O------*/
+.x-class {
+  background-image: url("../src/assets/x.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.o-class {
+  background-image: url("../src/assets/o.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.mark-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/*------SWEET ALERT-----*/
+.alert-popup {
+  border-radius: 15px;
+}
+.btn-popup {
+  border-radius: 10rem;
+  width: 300px;
+  background: rgb(48, 132, 250);
+  background: linear-gradient(
+    135deg,
+    rgba(48, 132, 250, 0.91) 20%,
+    rgba(72, 183, 248, 1) 83%
+  );
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-popup:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(48, 132, 250);
+  background: linear-gradient(
+    135deg,
+    rgba(48, 132, 250, 0.91) 20%,
+    rgba(72, 183, 248, 1) 83%
+  );
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.btn-popup:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: rgb(255, 204, 69);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 204, 69, 1) 20%,
+    rgba(250, 153, 13, 1) 83%
+  );
+  border-radius: 10rem;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.btn-popup:hover {
+  color: #fff;
+}
+
+.btn-popup:hover:before {
+  width: 100%;
+}
+
+/*---------MEDIA QUERIES FOR RESPOSIVE---------*/
+@media (max-width: 768px) {
+  .section-main {
+    height: 80%;
+    width: 90%;
+  }
+  .main-game {
+    padding: 2rem;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+  }
+}

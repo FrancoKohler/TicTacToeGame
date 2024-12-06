@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/style.css" />
+
+    <!--GOOGLE FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!--ICONS-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <!--SWEET ALERT--->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="section-main">
+      <div class="third-screen">
+        <div class="top-div">
+          <a class="ion-arrow" href="./index.html">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </a>
+          <img class="logo-third" src="../src/assets/logo.svg" alt="XO LOGO" />
+          <div class="turn-img">
+            <img src="../src/assets/x.svg" alt="img-turn" id="turnImg" />
+            <p>TURN</p>
+          </div>
+        </div>
+        <div class="turn-container">
+          <div class="game-container">
+            <!--Layout for the game-->
+            <div class="grid">
+              <div class="cell" data-cell></div>
+              <div class="cell" data-cell></div>
+              <div class="cell" data-cell></div>
+              <div class="cell" data-cell></div>
+              <div class="cell" data-cell></div>
+              <div class="cell" data-cell></div>
+              <div class="cell" data-cell></div>
+              <div class="cell" data-cell></div>
+              <div class="cell" data-cell></div>
+            </div>
+            <div class="score-divs">
+              <div class="div-x">
+                <p class="span-turn">X (YOU)<span id="xTurn"></span></p>
+                <span id="score-x">0</span>
+              </div>
+              <div class="div-o">
+                <span class="span-turn">O (CPU) <span id="oTurn"></span></span>
+                <span id="score-o">0</span>
+              </div>
+            </div>
+            <button id="resetBtn" class="game-btn">Reset Game</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script defer src="../src/app/index.js"></script>
+</html>
